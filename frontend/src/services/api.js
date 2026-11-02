@@ -1,5 +1,5 @@
 const BASE_URL = import.meta.env.VITE_API_URL
-  ? `${import.meta.env.VITE_API_URL}/api`
+  ? `${import.meta.env.VITE_API_URL.replace(/\/+$/, '')}/api`
   : '/api';
 
 const getHeaders = (isMultipart = false) => {
